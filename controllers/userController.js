@@ -43,9 +43,9 @@ const userController = {
     });
   },
 
-  // DELETE THIS BEFORE SUBMIT!!! -------------------------------
+  // Delete route to remove users
   deleteUser: (req, res) => {
-    // Delete user by id
+    // Delete first that matches body sent
     User.deleteOne(req.body, (e) => {
       if (e) {
         console.log(e);
